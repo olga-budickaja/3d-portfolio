@@ -14,7 +14,9 @@ const Works = () => {
             <Container>
                 <Left>
                     <List>
-                        <ListItems></ListItems>
+                        {data.map(item => (
+                            <ListItems key={item} text={item}>{item}</ListItems>
+                        ))}
                     </List>
                 </Left>
 
