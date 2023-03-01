@@ -1,6 +1,8 @@
 import { Container, Left, Right, Section, Title, Line, WhatWeDo, Subtitle, Description, Img } from "./HeroStyle.js";
 import Navbar from "../navbar/Navbar.jsx";
 import { Button } from "../navbar/NavbarStyle.js";
+import { Canvas } from "@react-three/fiber";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 const Hero = () => {
     return (
         <Section>
@@ -16,7 +18,19 @@ const Hero = () => {
                     <Button>Learn more</Button>
                 </Left>
                 <Right>
-                    {/*3d model*/}
+                    <Canvas>
+                        <OrbitControls enableZoom={false}/>
+                        <ambientLight intensity={1}/>
+                        <directionalLight position={[3, 2, 1]} />
+                        <Sphere args={[1,100,200]} scale={1.5}>
+                            <MeshDistortMaterial
+                                color="#480e60"
+                                attach="material"
+                                distort={0.5}
+                                speed={2}
+                            />
+                        </Sphere>
+                    </Canvas>
                     <Img src="./img/cosmo.png" alt="cosmo"/>
                 </Right>
             </Container>
