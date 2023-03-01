@@ -14,5 +14,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1rem;
   font-size: 14px;
+  color: white;
+}
+body {
+  background: url("../public/img/bg2.png");
+}
+
+@keyframes rotateHue {
+  to {
+    filter: hue-rotate(1turn);
+  }
 }

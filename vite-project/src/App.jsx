@@ -1,8 +1,8 @@
 import React from 'react';
-import Hero from "./hero/Hero.jsx";
-import Who from "./who/Who.jsx";
-import Contact from "./contact/Contact.jsx";
-import Works from "./works/Works.jsx";
+import Hero from "./components/hero/Hero.jsx";
+import Who from "./components/who/Who.jsx";
+import Contact from "./components/contact/Contact.jsx";
+import Works from "./components/works/Works.jsx";
 import styled from "styled-components";
 import './index.scss'
 
