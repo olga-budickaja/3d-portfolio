@@ -5,7 +5,6 @@ import Contact from "./components/contact/Contact.jsx";
 import Works from "./components/works/Works.jsx";
 import styled from "styled-components";
 import './index.scss'
-import Test from "./test/Test.jsx";
 
 const Container = styled.div`
   height: 100vh;
@@ -24,7 +23,6 @@ const App = () => {
             <Who/>
             <Works/>
             <Contact/>
-            <Test />
         </Container>
     );
 };

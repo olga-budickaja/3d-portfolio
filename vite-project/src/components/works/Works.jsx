@@ -1,4 +1,9 @@
 import { Container, Left, List, ListItems, Right, Section } from "./WorkStyle.js";
+import { useState } from "react";
+import WebDesign from "../WebDesign.jsx";
+import Development from "../Development.jsx";
+import ProductDesign from "../ProductDesign.jsx";
+import Illustration from "../Illustration.jsx";
 
 const data = [
     "Web Design",
@@ -9,18 +14,39 @@ const data = [
 ]
 
 const Works = () => {
+    const [work, setWork] = useState("Web Design");
     return (
         <Section>
             <Container>
                 <Left>
                     <List>
                         {data.map(item => (
-                            <ListItems key={item} text={item}>{item}</ListItems>
+                            <ListItems
+                                key={item}
+                                text={item}
+                                onClick={() => setWork(item)}
+                            >
+                                {item}
+                            </ListItems>
                         ))}
                     </List>
                 </Left>
 
-                <Right></Right>
+                <Right>
+                    {work === "Web Design" ? (
+                        <WebDesign />
+                    ) : (
+                        work === "Web Development" ? (
+                            <Development />
+                        ) : (
+                            work === "Illustration" ? (
+                                <Illustration />
+                            ) : (
+                                <ProductDesign />
+                            )
+                        )
+                    )}
+                </Right>
             </Container>
         </Section>
     );
