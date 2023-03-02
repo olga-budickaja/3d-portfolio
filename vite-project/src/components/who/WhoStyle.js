@@ -9,6 +9,9 @@ export const Section = styled.div`
 `;
 export const Left = styled.div`
   flex: 1;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 export const Right = styled.div`
   flex: 1;
@@ -16,4 +19,9 @@ export const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;

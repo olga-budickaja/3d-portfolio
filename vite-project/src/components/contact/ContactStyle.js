@@ -16,6 +16,11 @@ export const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 10px;
+  }
 `;
 export const Title = styled.h2`
   font-weight: 400;
@@ -26,6 +31,10 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+  
+  @media only screen and (max-width: 768px) {
+   width: 100%;
+  }
 `;
 export const Input = styled.input`
   padding: 20px;
@@ -41,4 +50,9 @@ export const Textarea = styled.textarea`
 `;
 export const Right = styled.div`
  flex: 1;
+
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;

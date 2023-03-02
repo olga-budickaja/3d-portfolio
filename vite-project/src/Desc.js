@@ -13,4 +13,13 @@ export const Desc = styled.div`
   -webkit-box-shadow: 10px 10px 77px 12px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 77px 12px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 77px 12px rgba(0,0,0,0.75);
+
+  @media only screen and (max-width: 768px) {
+    top: -200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-height: 150px;
+  }
 `;
