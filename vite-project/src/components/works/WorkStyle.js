@@ -53,5 +53,7 @@ export const ListItems = styled.li`
   }
 `;
 export const Right = styled.div`
+  position: relative;
   flex: 1;
+  cursor: grab;
 `;
